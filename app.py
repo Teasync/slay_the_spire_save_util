@@ -9,7 +9,7 @@ import json
 
 class SaveEditor(QDialog):
     def __init__(self, parent=None):
-        super(SaveEditor, self).__init__(parent, Qt.WindowSystemMenuHint | Qt.WindowTitleHint)
+        super(SaveEditor, self).__init__(parent)
 
         self.key = 'key'
         self.game_save = None
@@ -43,8 +43,8 @@ class SaveEditor(QDialog):
         export_save_button = QPushButton("Export Save File")
         export_save_button.clicked.connect(self.export_file)
 
-        layout.addWidget(export_json_button)
         layout.addWidget(export_save_button)
+        layout.addWidget(export_json_button)
         self.export_group_box.setLayout(layout)
         self.export_group_box.setDisabled(True)
 
