@@ -2,4 +2,4 @@
 
 To run, install PyQt5 and run main.py.
 
-[Image](save_editor.png)
+![Image](save_editor.png)
