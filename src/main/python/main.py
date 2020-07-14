@@ -18,6 +18,7 @@ class SaveEditor(QDialog):
         self.game_save = None
         self.import_path = None
 
+        # Creating widgets for adding to main dialog
         self.create_import_group_box()
         self.create_card_selection_group_box()
         self.create_relic_selection_group_box()
@@ -26,6 +27,7 @@ class SaveEditor(QDialog):
         main_layout = QVBoxLayout()
         main_layout.addWidget(self.import_group_box)
 
+        # Card and relic selection is a hbox within the main vbox
         card_and_relic_selection_layout = QHBoxLayout()
         card_and_relic_selection_layout.addWidget(self.card_selection_group_box)
         card_and_relic_selection_layout.addWidget(self.relic_selection_group_box)
